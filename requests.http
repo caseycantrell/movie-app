@@ -1,11 +1,67 @@
-GET http://localhost:3000/show/2
-Content-Type: application/json
+############# ACTORS ###############
 
-###
+### INDEX
+GET http://localhost:3000/actors
 
-POST http://localhost:3000/show
+### CREATE
+
+POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "id": 9,
+  "first_name": "Casey",
+  "last_name": "Cantrell",
+  "known_for": "Tons of movies"
 }
+
+### SHOW
+
+GET http://localhost:3000/actors/2
+
+### UPDATE
+
+PATCH http://localhost:3000/actors/2
+Content-Type: application/json
+
+{
+  "first_name": "Benedict"
+}
+
+### DESTROY
+
+DELETE http://localhost:3000/actors/24
+
+
+############# MOVIES ###############
+
+### INDEX
+GET http://localhost:3000/movies
+
+### CREATE
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Casey's Cool Movie",
+  "year": 2021,
+  "plot": "Some stuff happens and it's crazy"
+}
+
+### SHOW
+
+GET http://localhost:3000/movies/2
+
+
+### UPDATE
+
+PATCH http://localhost:3000/movies/2
+Content-Type: application/json
+
+{
+  "year": 1979
+}
+
+### DESTROY
+
+DELETE http://localhost:3000/movies/18
