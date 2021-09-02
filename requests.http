@@ -11,7 +11,8 @@ Content-Type: application/json
 {
   "first_name": "Casey",
   "last_name": "Cantrell",
-  "known_for": "Tons of movies"
+  "known_for": "Movies and stuff",
+  "age": 1
 }
 
 ### SHOW
@@ -20,11 +21,11 @@ GET http://localhost:3000/actors/2
 
 ### UPDATE
 
-PATCH http://localhost:3000/actors/2
+PATCH http://localhost:3000/actors/1
 Content-Type: application/json
 
 {
-  "first_name": "Benedict"
+  "age": "42"
 }
 
 ### DESTROY
@@ -44,7 +45,7 @@ Content-Type: application/json
 
 {
   "title": "Casey's Cool Movie",
-  "year": 2021,
+  "year": 1700,
   "plot": "Some stuff happens and it's crazy"
 }
 
