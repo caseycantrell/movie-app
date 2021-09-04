@@ -11,7 +11,6 @@ Content-Type: application/json
 {
   "first_name": "Casey",
   "last_name": "Cantrell",
-  "known_for": "Movies and stuff",
   "age": 1
 }
 

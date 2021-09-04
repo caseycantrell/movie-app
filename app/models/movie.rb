@@ -2,11 +2,9 @@ class Movie < ApplicationRecord
 
   has_many :actors
 
-  def invalid?
-    if year < 1895 || plot == nil
-      return true
-    else
-      return false
-    end
-  end
+  validates :title, presence: true
+  validates :year, presence: true, numericality: { greater_than: 1895 }
+  validates :plot, presence: true, length: { maximum: 500 }
+  
+
 end
