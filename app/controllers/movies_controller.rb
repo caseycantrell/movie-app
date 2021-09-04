@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     english: params[:english] 
     )
     if movie.save
-    render json: movie.as_json
+      render json: movie.as_json
     else
       render json: {errors: movie.errors.full_messages}
     end
@@ -34,9 +34,9 @@ class MoviesController < ApplicationController
     movie.english = params[:english] || movie.english
       
     if movie.save
-        render json: movie.as_json
+      render json: movie.as_json
     else
-        render json: {errors: movie.errors.full_messages}
+      render json: {errors: movie.errors.full_messages}
     end
   end
 
