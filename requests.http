@@ -29,7 +29,7 @@ Content-Type: application/json
 
 ### DESTROY
 
-DELETE http://localhost:3000/actors/24
+DELETE http://localhost:3000/actors/23
 
 
 ############# MOVIES ###############
@@ -50,7 +50,7 @@ Content-Type: application/json
 
 ### SHOW
 
-GET http://localhost:3000/movies/2
+GET http://localhost:3000/movies/21
 
 ### UPDATE
 
@@ -63,4 +63,4 @@ Content-Type: application/json
 
 ### DESTROY
 
-DELETE http://localhost:3000/movies/18
+DELETE http://localhost:3000/movies/21
