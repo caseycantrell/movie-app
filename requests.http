@@ -1,12 +1,17 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NTQ4ODB9.XT62IhrErgIDQ5Imv0ZcWz1GsHCda8xjb4fgMyTkhAk
+
+@hostname = http://localhost:3000
+
 ############# ACTORS ###############
 
 ### INDEX
-GET http://localhost:3000/actors
+GET {{hostname}}/actors
 
 ### CREATE
 
-POST http://localhost:3000/actors
+POST {{hostname}}/actors
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "first_name": "Casey",
@@ -16,12 +21,13 @@ Content-Type: application/json
 
 ### SHOW
 
-GET http://localhost:3000/actors/2
+GET {{hostname}}/actors/2
 
 ### UPDATE
 
-PATCH http://localhost:3000/actors/1
+PATCH {{hostname}}/actors/1
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
   "age": "42"
@@ -29,17 +35,20 @@ Content-Type: application/json
 
 ### DESTROY
 
-DELETE http://localhost:3000/actors/23
+
+DELETE {{hostname}}/actors/21
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 
 ############# MOVIES ###############
 
 ### INDEX
-GET http://localhost:3000/movies
+GET {{hostname}}/movies
 
 ### CREATE
 
-POST http://localhost:3000/movies
+POST {{hostname}}/movies
 Content-Type: application/json
 
 {
@@ -50,11 +59,11 @@ Content-Type: application/json
 
 ### SHOW
 
-GET http://localhost:3000/movies/21
+GET {{hostname}}/movies/21
 
 ### UPDATE
 
-PATCH http://localhost:3000/movies/2
+PATCH {{hostname}}/movies/2
 Content-Type: application/json
 
 {
@@ -63,4 +72,28 @@ Content-Type: application/json
 
 ### DESTROY
 
-DELETE http://localhost:3000/movies/21
+DELETE {{hostname}}/movies/21
+
+
+####################### USERS
+
+### CREATE (signup)
+POST {{hostname}}/users
+Content-Type: application/json
+
+{
+  "name": "Quincy",
+  "email": "quincy@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+####################### SESSIONS
+### CREATE (login)
+POST {{hostname}}/sessions
+Content-Type: application/json
+
+{
+  "email": "casey@gmail.com",
+  "password": "password"
+}
