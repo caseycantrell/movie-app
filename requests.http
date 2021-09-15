@@ -97,3 +97,13 @@ Content-Type: application/json
   "email": "casey@gmail.com",
   "password": "password"
 }
+
+########## MOVIE/GENRES
+
+POST {{hostname}}/movie_genres
+Content-Type: application/json
+
+{
+  "movie_id": 1,
+  "genre_id": 1
+}
