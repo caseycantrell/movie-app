@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
 
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
   
   def index
     movies = Movie.all
@@ -12,8 +12,7 @@ class MoviesController < ApplicationController
     title: params[:title], 
     year: params[:year], 
     plot: params[:plot],
-    director: params[:director],
-    english: params[:english] 
+    director: params[:director]
     )
     if movie.save
       render json: movie.as_json
