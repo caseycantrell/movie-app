@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NTQ4ODB9.XT62IhrErgIDQ5Imv0ZcWz1GsHCda8xjb4fgMyTkhAk
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzM3MzMxOTl9.o7P0O3UyOFYHKg_7Z4VOLUM-XvUsv_doIHHSxST7QVM
 
 @hostname = http://localhost:3000
 
@@ -16,7 +16,8 @@ Authorization: Bearer {{jwt}}
 {
   "first_name": "Casey",
   "last_name": "Cantrell",
-  "age": 1
+  "known_for": "stuff",
+  "age": 14
 }
 
 ### SHOW
@@ -25,7 +26,7 @@ GET {{hostname}}/actors/2
 
 ### UPDATE
 
-PATCH {{hostname}}/actors/1
+PATCH {{hostname}}/actors/2
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
@@ -36,7 +37,7 @@ Authorization: Bearer {{jwt}}
 ### DESTROY
 
 
-DELETE {{hostname}}/actors/21
+DELETE {{hostname}}/actors/8
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
