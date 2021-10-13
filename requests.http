@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzM3MzMxOTl9.o7P0O3UyOFYHKg_7Z4VOLUM-XvUsv_doIHHSxST7QVM
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzQxNjEwNTh9._zPWOYNoF6YHixtemTe-7x31tJNNfBUeb35UCuVjQ-I
 
 @hostname = http://localhost:3000
 
