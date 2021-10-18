@@ -26,12 +26,12 @@ GET {{hostname}}/actors/2
 
 ### UPDATE
 
-PATCH {{hostname}}/actors/2
+PATCH {{hostname}}/actors/5
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "age": "42"
+  "age": "50"
 }
 
 ### DESTROY
@@ -83,10 +83,10 @@ POST {{hostname}}/users
 Content-Type: application/json
 
 {
-  "name": "Quincy",
-  "email": "quincy@gmail.com",
-  "password": "password",
-  "password_confirmation": "password"
+  "name": "test",
+  "email": "test@test.com",
+  "password": "test",
+  "password_confirmation": "test"
 }
 
 ####################### SESSIONS
